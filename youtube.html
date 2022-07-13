@@ -9,11 +9,15 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"
+    integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>YouTube</title>
 </head>
 
-<body style="background-color:  rgb(60, 58, 58);">
-  <nav class="navbar" style="background-color:rgb(60, 58, 58)">
+<body style="background-color:  rgb(60, 58, 58)">
+  <nav class="navbar" style="background-color:rgb(37, 37, 37)">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="https://img.icons8.com/color/40/000000/youtube-play.png" alt=""
@@ -23,133 +27,164 @@
         <input class="me-2 youtube-search-field" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-
     </div>
   </nav>
 
-
-
-
-
-  <div class="container-fluid" style="margin-left: 0%;">
+  <div class="dashboard">
     <div class="row">
       <div class="col-2 sidebar">
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="white" class="bi bi-house-door"
-            viewBox="0 0 16 16">
-            <path
-              d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
-          </svg>
-          <b style="margin-left:7%;"> Home </b>
-        </span><br><br>
-
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="white" class="bi bi-compass"
-            viewBox="0 0 16 16">
-            <path
-              d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
-          </svg>
-          <b style="margin-left:7%;"> Explore </b>
-        </span><br><br>
-
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="white"
-            class="bi bi-arrow-down-left-square" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm10.096 3.146a.5.5 0 1 1 .707.708L6.707 9.95h2.768a.5.5 0 1 1 0 1H5.5a.5.5 0 0 1-.5-.5V6.475a.5.5 0 1 1 1 0v2.768l4.096-4.097z" />
-          </svg>
-          <b style="margin-left:7%;"> Shorts </b>
-        </span><br><br>
-
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="white" class="bi bi-collection-play"
-            viewBox="0 0 16 16">
-            <path
-              d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1zm2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848l-4-2.5z" />
-            <path
-              d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5h13z" />
-          </svg>
-          <b style="margin-left:7%;"> Subscriptions</b>
-        </span><br>
-        <hr style="color: black;">
-
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="white" class="bi bi-caret-right-square"
-            viewBox="0 0 16 16">
-            <path
-              d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-            <path
-              d="M5.795 12.456A.5.5 0 0 1 5.5 12V4a.5.5 0 0 1 .832-.374l4.5 4a.5.5 0 0 1 0 .748l-4.5 4a.5.5 0 0 1-.537.082z" />
-          </svg>
-          <b style="margin-left:7%;"> Library</b>
-        </span><br><br>
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="white" class="bi bi-clock-history"
-            viewBox="0 0 16 16">
-            <path
-              d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
-            <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
-            <path
-              d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
-          </svg>
-          <b style="margin-left:7%;"> History</b></span><br>
-        <hr style="color: black;">
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
+        <div class="p-3 sideitemdiv">
+          <a href="#" class="mx-2 sideitem"><i class="bi bi-house-door me-2"></i>Home</a>
+        </div>
       </div>
-
-
       <div class="col-9">
-
-        <span class="badge rounded-pill badgecolor">All</span>
-        <span class="badge rounded-pill badgecolor">Live</span>
-        <span class="badge rounded-pill badgecolor">Music</span>
-        <span class="badge rounded-pill badgecolor">Mixes</span>
-        <span class="badge rounded-pill badgecolor">Gadgets</span>
-        <span class="badge rounded-pill badgecolor">Tech</span>
-        <span class="badge rounded-pill badgecolor">Recent</span>
-        <span class="badge rounded-pill badgecolor">News</span>
-        <hr style="color:black;">
-
+        <div class="chips p-3">
+          <span class="badge rounded-pill bg-secondary p-2 mx-2 mychip">Live</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Trending</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Programming</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Music</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Cars</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Macbook</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Apple</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Technology</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Code</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Trending</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Programming</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Music</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Cars</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Macbook</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Apple</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Technology</span>
+          <span class="badge rounded-pill bg-secondary p-2 mx-1 mychip">Code</span>
+        </div>
+        <hr>
       </div>
 
     </div>
   </div>
 
+
+
   <style>
-    .inputfield {
-      width: 40vw;
-      margin-left: 30%;
-    }
-
-    .badgecolor {
-      background-color: rgb(142, 135, 135);
-      margin-left: 4%;
-    }
-
     .navbar-center {
       position: absolute;
       width: 45vw;
       text-align: center;
-      margin-left:25vw;
+      margin-left: 25vw;
     }
 
-    .youtube-search-field{
+    .youtube-search-field {
       background-color: black;
       color: aliceblue;
-      width:35vw
+      width: 35vw
     }
 
-    .sidebar{
-      padding-top:30px;
+    .sidebar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sidebar {
+      background-color: rgb(37, 37, 37);
+      height: 92vh;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
+
+    .sideitem {
+      text-align: center;
+      font-size: 1.2em;
+      text-decoration: none;
+      color: white;
+      margin-left: 2vw !important;
+    }
+
+    .sideitemdiv:hover {
+      background-color: gray;
+      color: aliceblue;
+    }
+
+
+
+    .item {
       color: white;
     }
 
-    .youtube-search-field::after{
-      background-color: black;
+    .item:hover {
+      color: aliceblue;
     }
 
-    .youtube-search-field::-moz-selection{
-      background-color: black;
+    .chips::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chips {
+      width: 80vw;
+      overflow-x: scroll;
+      white-space: nowrap;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .mychip {
+      font-size: 0.8em;
+      white-space: nowrap;
     }
   </style>
 
