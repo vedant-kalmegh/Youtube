@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to tut 6</h1>
+    <hr>
+    <h4>Greet Me Program</h4>
+
+
+
+    <h1 id="result"></h1>
+    <hr>
+
+
+    <div>
+        <button onclick="sayHello()">Say Hello!</button>
+        <button onclick="sayGM()">Say Good Morning!</button>
+        <button onclick="sayGN()">Say Good Night!</button>
+        <hr>
+
+    </div>
+
+    <h3 id="date"></h3>
+    <button onclick="showDate()">Show Date</button>
+
+
+    <script>
+
+        function showDate(){
+            let today = new Date()
+            let date = document.getElementById("date");
+            date.innerText = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`;
+        }
+
+        function sayHello() {
+            let res = document.getElementById("result");
+            res.innerHTML = "<i style=''>Hello!</i>"
+        }
+
+        function sayGM() {
+            let res = document.getElementById("result");
+            res.innerText = "Good Morning!"
+        }
+
+        function sayGN() {
+            let res = document.getElementById("result");
+            res.innerText = "Good Night!"
+        }
+    </script>
+
+</body>
+
+</html>
