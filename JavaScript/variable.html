@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+    <button onclick="showInformation()">Show information</button><br/></br>
+
+    <script>
+        var name="Ashutosh"
+        var phno = 8766834856
+        var score = 9.8
+        var isStuding = true
+
+        console.log("Name is",name)
+        console.log(`My Phone no is ${phno}`) //String interpolation
+        console.log(`My Score in Maths is ${score}`)
+        console.log(`I am studing ${isStuding}`)
+
+
+        //Dom Manipulation Eg 1
+
+        function showInformation(){
+            document.write("<style>body{background-color:blue}</style>")
+            document.write("Name is \n",name);
+            document.write("</br>")
+            document.write(`My Phone no is ${phno}\n`)
+            document.write("</br>")
+            document.write(`My Score in Maths is ${score}\n`)
+            document.write("</br>")
+            document.write(`I am studing ${isStuding}\n`)
+            document.write("</br>")
+        }
+
+        
+
+        
+
+    </script>
+</body>
+</html>

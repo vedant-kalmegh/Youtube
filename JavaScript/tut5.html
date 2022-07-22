@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="mybody">
+    <p id="para1">This is a awesome Para</p>
+    <button onclick="changeToRed()">Red</button>
+    <button onclick="changeToBlue()">Blue</button>
+    <button onclick="changeColor('yellow')">Change Color</button>
+    <button onclick="changeBackground()">Change backgroundColor</button>
+    <button onclick="toggleBackground()">Dark Mode - Light Mode</button>
+
+    <script>
+        let initialColor = "white" //grey
+
+        function toggleBackground() {
+            let bg = document.getElementById("mybody");
+            if(initialColor == "white"){
+                bg.style.backgroundColor = "grey";
+                initialColor = "grey";
+            }else{
+                bg.style.backgroundColor = "white";
+                initialColor = "white"
+            } 
+        }
+
+
+
+
+
+
+        function changeColor(mycolor) {
+            let para1 = document.getElementById("para1");
+            para1.style.color = mycolor;
+        }
+
+
+
+
+
+        function changeToRed() {
+            let para1 = document.getElementById("para1");
+            console.log(para1);
+            para1.style.color = "red";
+        }
+
+        function changeToBlue() {
+            let vedant = document.getElementById("para1");
+            console.log(vedant);
+            vedant.style.color = "blue"
+        }
+
+        function changeBackground(params) {
+            let para1 = document.getElementById("para1");
+            para1.style.backgroundColor = "orange";
+        }
+
+
+
+
+
+
+
+        // changeToRed();
+
+
+    </script>
+
+    <style>
+        #para1 {
+            background-color: blueviolet;
+            text-align: center;
+        }
+    </style>
+
+</body>
+
+</html>
