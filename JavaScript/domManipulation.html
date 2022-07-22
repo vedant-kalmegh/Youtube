@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>What is DOM ? Document Object Model</p>
+
+    <ul>
+        <li>1) Events</li>
+        <li>Click Event, Hover Event</li>
+        <li><button type="button" onclick="console.log('Hello World')">Click</button></li>
+        <li><button type="button" onclick="console.log(10+20)">Click</button></li>
+    </ul>
+
+    <ul>
+        <li>
+            <button onclick="showAlert()">Delete Files</button>
+        </li>
+    </ul>
+
+    <p id="hello"></p>
+
+
+
+    <h1 id="add"></h1>
+    <button onclick="addition()">Add</button>
+
+    <script>
+
+        let n1 = 10;
+        let n2 = 20;
+        function addition() {
+            let addDom = document.getElementById("add");
+            let add = n1+n2;
+            addDom.innerHTML = `Additon of ${n1} and ${n2} is ${add}`
+        }
+
+
+
+
+
+
+
+
+        // var a = "Ashutosh" //Literal
+        
+        //a is variable
+
+
+        
+        // console.log(a);
+
+        // var a = "Vedant"
+
+        // console.log(a);
+
+
+
+        // let b = "JavaScript"
+
+        // console.log(b);
+
+        // b = "Python"
+
+        // console.log(b);
+
+
+
+        // console.log(typeof a); This is a single Line COmment
+
+
+        /* console.log(typeof b); This is multiline comment
+        console.log(typeof c); */
+
+
+
+
+        let score = 100
+        let subject = "BMW"
+
+
+        // console.log("Previous",typeof score);
+        // console.log("Previous Sub",typeof subject);
+
+
+        // score = "english"
+        // subject = 500
+
+        // console.log("After", typeof score);
+        // console.log("After Sub", typeof subject);
+
+
+        const car = "BMW"
+
+        console.log(typeof car);
+
+        let count = 20
+
+
+
+        function showAlert(){
+            alert("<h1>Hello World</h1>")
+        }
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function greet() {
+            var hello = document.getElementById("hello")
+            hello.innerHTML = "Hello Vedant!"
+            console.log(hello);
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
