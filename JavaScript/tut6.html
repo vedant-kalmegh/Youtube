@@ -38,6 +38,12 @@
     <h3 id="date"></h3>
     <button onclick="showDate()">Show Date</button>
 
+    <h5 id="textsize"> Sample Text Size </h5>
+    
+    <button onclick="increasesize()"> + </button>
+     
+    <button onclick="decreasesize()"> - </button>
+
     <style>
             .sayAF{
                 background-color: yellow;
@@ -68,6 +74,22 @@
 
     <script>
 
+
+        let initialsize = 30
+        function increasesize(){
+            let sizeOfText = document.getElementById("textsize");
+            initialsize = initialsize + 1 ;
+            sizeOfText.style.fontSize = initialsize + "px";
+            console.log(initialsize);
+
+        }    
+        
+        function decreasesize() {
+            let sizeOfText = document.getElementById("textsize"); 
+            initialsize = initialsize - 1; 
+            sizeOfText.style.fontSize = initialsize + "px"; 
+        }
+
         function showDate(){
             let today = new Date()
             let date = document.getElementById("date");
@@ -78,7 +100,8 @@
            
         function sayHello() {
             let res = document.getElementById("result");
-            res.innerHTML = "<i style=''>Hello!</i>"
+            res.innerHTML = "<i style=''> Hello! </i>"
+            
 
 
         }
