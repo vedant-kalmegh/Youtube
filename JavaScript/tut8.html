@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tut 8</title>
+</head>
+
+<body>
+
+    <h3>----- Calculator -------</h3>
+    <input type="number" name="" id="n1">
+    <input type="number" name="" id="n2">
+
+    <button onclick="saveRecord()">Save Value</button>
+    <button onclick="addition()">Add +</button>
+    <button onclick="substraction()">Sub - </button>
+    <button onclick="mul()">Mul *</button>
+    <button onclick="div()">Div /</button>
+    <button onclick="mod()">Mod %</button>
+
+    <script>
+        let n1 = document.getElementById("n1");
+        let n2 = document.getElementById("n2");
+
+        function saveRecord() {
+            let float_n1 = parseFloat(n1.value); //conversion of string to number
+            let float_n2 = parseFloat(n2.value); //type conversion 0r type casting
+
+            console.log(typeof n1.value);
+            console.log(typeof n2.value);
+            console.log(typeof float_n1 );
+            console.log(typeof float_n2 );
+        } 
+        
+        
+        function addition() {
+            let float_n1 = parseFloat(n1.value);
+            let float_n2 = parseFloat(n2.value);
+            console.log(float_n1+float_n2);
+        }
+        function substraction() {
+            let float_n1 = parseFloat(n1.value);
+            let float_n2 = parseFloat(n2.value);
+            console.log(float_n1-float_n2);
+        }
+        function mul() {
+            let float_n1 = parseFloat(n1.value);
+            let float_n2 = parseFloat(n2.value);
+            console.log(float_n1*float_n2);
+        }
+        function div() {
+            let float_n1 = parseFloat(n1.value);
+            let float_n2 = parseFloat(n2.value);
+            console.log(float_n1/float_n2);
+        }
+        function mod() {
+            let float_n1 = parseFloat(n1.value);
+            let float_n2 = parseFloat(n2.value);
+            console.log(float_n1%float_n2);
+        }
+    </script>
+</body>
+
+</html>
