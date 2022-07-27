@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>Login Form</title>
+</head>
+
+<body>
+    <div class="card-body" >
+        <form action="">
+
+            <h5 id="Title"> Title
+                <input type="text" name="Title" aria-label="Title" placeholder="Title">
+            </h5>
+
+            <h5>
+                <label for="Description"> Description </label>
+                <textarea id="Description" name="Description">Description</textarea>
+            </h5>
+
+            <h5><label for="start">Start date:</label></h5>
+
+            <input type="date" id="startdate" name="trip-start" value="Enter the date" min="1800-01-01" max="2100-01-01">
+
+            <h5><label for="start"> Target date </label></h5>
+
+            <input type="date" id="start" name="trip-start" value="Enter the date" min="1800-01-01" max="2100-01-01">
+
+            <div>
+                <button style=margin-top:30px; onclick = "savebtn()">
+                    Save
+                </button>
+            </div>
+
+
+        </form>
+
+    </div>
+
+    <script>
+        function savebtn(){
+            let title = document.getElementById("Title")
+            title.innerText = "Vedant Kalmegh"; 
+            console.log(title.innerText); 
+
+            let description = document.getElementById("Description")
+            description.innerText = "Lorem epsum skjhdf d fdguyert dfuiytvdf dfyegfvdf fygdkghr thrt roirht kjhtyiuh giufhdig erhtir tiurtigd fyguryfe rt647t6 r4row e8wue wru hi y8r7 e "; 
+            console.log(description.innerText);
+            }
+
+        console.log(savebtn());
+
+
+    </script>
+
+</body>
+
+</html>
