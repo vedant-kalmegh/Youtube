@@ -21,6 +21,8 @@
     <button onclick="div()">Div /</button>
     <button onclick="mod()">Mod %</button>
 
+    <h1 id="result"></h1>
+
     <script>
         let n1 = document.getElementById("n1");
         let n2 = document.getElementById("n2");
@@ -34,28 +36,39 @@
         function addition() {
             let float_n1 = parseFloat(n1.value);
             let float_n2 = parseFloat(n2.value);
-            console.log(float_n1+float_n2);
+            console.log(float_n1 + float_n2);
+            showresult(float_n1 + float_n2);
         }
         function substraction() {
             let float_n1 = parseFloat(n1.value);
             let float_n2 = parseFloat(n2.value);
-            console.log(float_n1-float_n2);
+            console.log(float_n1 - float_n2);
+            showresult(float_n1 - float_n2);
         }
         function mul() {
             let float_n1 = parseFloat(n1.value);
             let float_n2 = parseFloat(n2.value);
-            console.log(float_n1*float_n2);
+            console.log(float_n1 * float_n2);
+            showresult(float_n1 * float_n2);
         }
         function div() {
             let float_n1 = parseFloat(n1.value);
             let float_n2 = parseFloat(n2.value);
-            console.log(float_n1/float_n2);
+            console.log(float_n1 / float_n2);
+            showresult(float_n1 / float_n2);
         }
         function mod() {
             let float_n1 = parseFloat(n1.value);
             let float_n2 = parseFloat(n2.value);
-            console.log(float_n1%float_n2);
+            console.log(float_n1 % float_n2);
+            showresult(float_n1 % float_n2);
         }
+        function showresult(output) {
+            document.getElementById("result").innerHTML = output
+        }
+
+
+
     </script>
 </body>
 
