@@ -16,26 +16,64 @@
         <label for="title" style="margin-top: 20px;">Title</label>
         <input type="text" name="title" id="title" style="width: 50%">
 
-
-
         <label for="decs" style="margin-top: 20px;">Description</label>
         <textarea name="desc" id="desc" style="width: 50%"></textarea>
-
-
-
 
         <label for="dc" style="margin-top: 20px;">Date Created</label>
         <input type="date" name="dc" id="dc" style="width: 50%">
 
-
-
         <label for="tc" style="margin-top: 20px;">Completion Date (Target)</label>
         <input type="date" name="tc" id="tc" style="width: 50%">
 
-        <button style="margin-top: 20px;">Save</button>
+        <button style="margin-top: 20px;" onclick="save()">Save</button>
+
+        <hr>
+
+        <div style="background-color: brown;">
+            <div>
+                <span><b>Title: </b></span>
+                <span id="res_title"></span>
+            </div>
+            <div>
+                <span><b>Description: </b></span>
+                <span id="res_desc"></span>
+            </div>
+            <div>
+                <span><b>Date Created: </b></span>
+                <span id="res_dc"></span>
+            </div>
+            <div>
+                <span><b>Target: </b></span>
+                <span id="res_tc"></span>
+            </div>
+        </div>
+
 
 
     </div>
+
+
+
+
+    <script>
+        function save() {
+            let title = document.getElementById("title");
+            let desc = document.getElementById("desc");
+            let dc = document.getElementById("dc");
+            let tc = document.getElementById("tc");
+
+
+            console.log(title.value);
+            console.log(desc.value);
+            console.log(dc.value);
+            console.log(tc.value);
+
+            document.getElementById("res_title").innerHTML = title.value;
+            document.getElementById("res_desc").innerHTML = desc.value;
+            document.getElementById("res_dc").innerHTML = dc.value;
+            document.getElementById("res_tc").innerHTML = tc.value;
+        }
+    </script>
 </body>
 
 </html>
