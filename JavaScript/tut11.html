@@ -23,20 +23,21 @@
     </div>
     <div>
         <span><b> Enter the number :- </b></span>
-        <span id="number"></span>
+        <span id="no"></span>
     </div>
 
     <script>
         
-
+           
             function save() {
             
             let number = document.getElementById("title");
+            let no = document.getElementById("no");
             let j = (number.value) ;
             for(let i = 1; i <=10; i++)
             {
             console.log(i*j);
-            document.getElementById("number").innerHTML =`${i*j}` ;
+            no.innerHTML = no.innerHTML+ `<h5> ${i*j} </h5>` ;
             }
 
         }
