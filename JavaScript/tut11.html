@@ -10,43 +10,36 @@
 </head>
 
 <h3 style="text-align:center"> Print Table </h3>
-    <hr>
-    <div style="display:grid; place-items: center;">
+<hr>
+<div style="display:grid; place-items: center;">
 
-        <label for="title" style="margin-top: 20px;"> <b> Enter the number </b></label>
-        <input type="text" name="title" id="title" style="width: 50%">
+    <label for="title" style="margin-top: 20px;"> <b> Enter the number </b></label>
+    <input type="text" name="title" id="number" style="width: 50%">
 
-        <button style="margin-top: 20px;" onclick="save()">Save</button>
-    
-        <hr style="color: black;">
+    <button style="margin-top: 20px;" onclick="save()">Print Table</button>
 
-    </div>
-    <div>
-        <span><b> Enter the number :- </b></span>
-        <span id="no"></span>
-    </div>
+    <hr style="color: black;">
 
-    <script>
-        
-           
-            function save() {
-            
-            let number = document.getElementById("title");
-            let no = document.getElementById("no");
-            let j = (number.value) ;
-            for(let i = 1; i <=10; i++)
-            {
-            console.log(i*j);
-            no.innerHTML = no.innerHTML+ `<h5> ${i*j} </h5>` ;
-            }
+</div>
+<div style="display:grid; place-items: center">
+    <span style="text-align: center;"><b style="text-align:center"> Table is :- </b></span>
+    <span id="result" style="text-align: center;"></span>
+</div>
 
+<script>
+    function save() {
+        let number = document.getElementById("number");
+        let no = document.getElementById("result");
+        let j = (number.value);
+        for (let i = 1; i <= 10; i++) {
+            console.log(i * j);
+            no.innerHTML = no.innerHTML + `<h5> ${i * j} </h5>`;
         }
-    
+    }
+</script>
 
-    </script>
 
 
-    
 
 
 </body>
