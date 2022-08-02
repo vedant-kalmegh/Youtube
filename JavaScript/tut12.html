@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+        }
+    </style>
+    <h3>JavaScript Array</h3>
+    <div>
+        <table>
+            <tr id="res">
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div>
+        <label for="elm">Enter Element</label>
+        <input type="text" name="" id="elm">
+        <button onclick="add()">Add Element</button>
+        <button onclick="popElm()">Pop Element</button>
+    </div>
+
+    <hr>
+    <label for="index">Enter Index to delete</label>
+    <input type="text" id="index">
+    <button onclick="removeAt()">Delete Element</button>
+    <script>
+        let myarray = [1, 2, 6, 5, 4, 3, 7, 89, 32]
+
+        function add() {
+            let elm = document.getElementById("elm").value;
+            myarray.push(elm)
+            let res = document.getElementById('res');
+            res.innerHTML = "";
+            for (let x = 0; x <= myarray.length - 1; x++) {
+                console.log(myarray[x]);
+                res.innerHTML = res.innerHTML + `<td style="text-align:center">&nbsp;${myarray[x]}&nbsp;</td>`
+            }
+        }
+
+        function popElm() {
+            res.innerHTML = "";
+            myarray.pop()
+            for (let x = 0; x <= myarray.length - 1; x++) {
+                console.log(myarray[x]);
+                res.innerHTML = res.innerHTML + `<td style="text-align:center">&nbsp;${myarray[x]}&nbsp;</td>`
+            }
+        }
+
+        function removeAt() {
+            res.innerHTML = "";
+            let index = parseInt(document.getElementById("index").value);
+            myarray.splice(index, 1);
+            for (let x = 0; x <= myarray.length - 1; x++) {
+                console.log(myarray[x]);
+                res.innerHTML = res.innerHTML + `<td style="text-align:center">&nbsp;${myarray[x]}&nbsp;</td>`
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
