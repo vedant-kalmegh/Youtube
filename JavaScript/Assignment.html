@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Objects</h1>
+    <hr>
+
+    <div>
+        <label for="Enter the name" style="margin-top: 20px;"> <b> Enter the Name </b></label>
+        <input type="text" id="name">
+        <span id="name"> </span>
+        <button style="margin-top: 20px;" onclick="savename()">Add Name</button>
+    </div>
+
+    <div>
+        <label for="title" style="margin-top: 20px;"> <b> Enter the Price </b></label>
+        <input type="text" id="price">
+        <button style="margin-top: 20px;" onclick="saveprice()">Add Price</button>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label for="title" style="margin-top: 20px;"> <b> Enter the Details </b></label>
+        <input type="text" id="specs">
+        <button style="margin-top: 20px;" onclick="savespecs()">Add Specs</button>
+    </div>
+
+    <div style="display:grid; place-items: center"></div>
+
+    <table id=laptops> </table>
+
+    <script>
+
+        function savename() {
+            let computer = document.getElementById("laptops");
+            computer.innerHTML = "<tr> <th>Name</th> <th>Price</th> <th>Specs</th> </tr>"
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

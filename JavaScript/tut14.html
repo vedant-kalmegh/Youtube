@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Objects</h1>
     <hr>
 
     <style>
-         table,
+        table,
         th,
         td {
             border: 1px solid;
+            margin-bottom: 2%;
         }
     </style>
 
 
-    <table id="laptops">
-
-    </table>
+    <table id="laptops"></table>
     <script>
         let car = {
-            "BMW":40000,
-            "Maruti":200,
+            "BMW": 40000,
+            "Maruti": 200,
             "Mercedes": 800,
             "Porche": 500
         }
 
-        
+
         console.log(car["BMW"]);
         console.log(car["Maruti"]);
         console.log(car["Mercedes"]);
@@ -44,20 +45,20 @@
 
         //JSON//Object
         let computer = [
-            {name:"MacBook Air", "Price":48467, "specs":["i5 7th gen","retina display","128GB SSD",]},
-            {name:"MacBook Pro", "Price":6356447, "specs":["i7 7th gen","retina display","512GB SSD",]},
-            {name:"Dell Inspiron", "Price":63456, "specs":["i9 10th gen","FHD display","512GB SSD",]},
-            {name:"Lenovo ThinkPad", "Price":48375, "specs":["i7 10th gen","LCD display","512GB SSD",]},
+            { name: "MacBook Air", "Price": 48467, "specs": ["i5 7th gen", "retina display", "128GB SSD",] },
+            { name: "MacBook Pro", "Price": 6356447, "specs": ["i7 7th gen", "retina display", "512GB SSD",] },
+            { name: "Dell Inspiron", "Price": 63456, "specs": ["i9 10th gen", "FHD display", "512GB SSD",] },
+            { name: "Lenovo ThinkPad", "Price": 48375, "specs": ["i7 10th gen", "LCD display", "512GB SSD",] },
         ]
 
-        for(let x=0; x<computer.length; x++){
+        for (let x = 0; x < computer.length; x++) {
             console.log(computer[x]["name"], computer[x]['Price'], computer[x]['specs']);
         }
 
 
         let laptop = document.getElementById("laptops");
         laptop.innerHTML = "<tr><th>Name</th><th>Price</th><th>Specs</th></tr>"
-        for(let x=0; x<computer.length; x++){
+        for (let x = 0; x < computer.length; x++) {
             laptop.innerHTML = laptop.innerHTML + `<tr><td>${computer[x].name}</td><td style="color:green">${computer[x].Price}</td><td>${computer[x].specs}</td><tr>`
         }
 
@@ -67,6 +68,9 @@
 
 
 
+
+
     </script>
 </body>
+
 </html>
