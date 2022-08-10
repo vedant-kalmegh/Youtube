@@ -32,12 +32,18 @@
         <div style="margin-bottom: 20px;">
             <label for="title" style="margin-top: 20px;"> <b> Enter Product Url </b></label>
             <input type="text" id="product_url">
+         
         </div>
         <br>
         <div style="margin-bottom: 20px;">
             <button type="button" onclick="saveProduct()">Save</button>
+            <button type="button" onclick="deletevaluefromarray()">Delete </button>
         </div>
         <br>
+       
+            
+        
+
     </form>
 
 
@@ -57,7 +63,7 @@
     <script>
 
         let productTable = document.getElementById("laptops");
-        productTable.innerHTML = "<tr><th>Product Id</th> <th>Name</th> <th>Price</th> <th>Specs</th> </tr>"
+        productTable.innerHTML = "<tr><th>Product Id</th> <th>Name</th> <th>Price</th> <th>Specs</th> <th>product_url</th></tr>"
 
        
 
@@ -67,12 +73,13 @@
         let name = document.getElementById("name"); //Value Type
         let price = document.getElementById("price");
         let specs = document.getElementById("specs");
+        let url = document.getElementById("product_url");
 
         function saveProduct() {
             // let date = new Date()
-            productTable.innerHTML = "<tr><th>Product Id</th> <th>Name</th> <th>Price</th> <th>Specs</th> </tr>"
+            productTable.innerHTML = "<tr><th>Product Id</th> <th>Name</th> <th>Price</th> <th>Specs</th><th>product_url</th> </tr>"
 
-            console.log(name.value, price.value, specs.value);
+            console.log(name.value, price.value, specs.value, url.value);
             let product = {};
 
             //Method 1
@@ -82,6 +89,7 @@
             product["name"] = name.value;
             product["price"] = price.value;
             product["specs"] = specs.value;
+            product["url"] = url.value;
 
             // console.log(product);
 
@@ -94,17 +102,16 @@
             store.push(product);
             console.log(store);
 
-
-
-
-            for(let x=0; x<store.length; x++){
-                productTable.innerHTML = productTable.innerHTML + `<tr><td>${store[x].id}</td><td>${store[x].name}</td><td>${store[x].price}</td><td>${store[x].specs}</td></tr>`;
+            for(let x=0; x<store.length; x++) {
+                productTable.innerHTML = productTable.innerHTML + `<tr><td>${store[x].id}</td><td>${store[x].name}</td><td>${store[x].price}</td><td>${store[x].specs}</td> <td>${store[x].url}</td></tr>`;
             }
 
+            }
 
-
-
-        }
+            function deletevaluefromarray() 
+            {
+                    productTable.innerHTML.splice(-1,1);
+            }
 
 
 
