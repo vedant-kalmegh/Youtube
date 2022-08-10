@@ -50,64 +50,16 @@
         </dl>
     </div>
 
+    <div class="container">
+        <table id="product_list" class="table">
+
+        </table>
+    </div>
+
 
 
 
     <script>
-        let product = {
-            name: "MacBook Air",
-            price: "3000",
-            specs: "8Gb Ram 128GB SSD",
-            url: "www.img.com/macbookair"
-        }
-
-        console.log(product);
-
-        // class Product{
-        //     constructor(name,price, specs, url){
-        //         this.name = name;
-        //         this.price = price;
-        //         this.specs = specs;
-        //         this.url = url 
-        //     }
-        // }
-
-
-        class Car {
-
-            fuel = "empty";
-            constructor() {
-                console.log("Fuel Status is", this.fuel);
-            }
-            fillFuel() {
-                this.fuel = "full";
-            }
-            mymethod() { //user defined method
-                console.log("After Constructor Called");
-            }
-        }
-
-
-
-
-        let vedant = new Car(); //object creation //constructor is first called
-        vedant.mymethod(); //user defined methods are called
-        vedant.fillFuel();
-        console.log(vedant.fuel);
-
-        let name = document.getElementById("name")
-        let price = document.getElementById("price")
-        let specs = document.getElementById("specs")
-        let url = document.getElementById("url")
-
-
-         let store = []
-        function save() {
-            
-            store.push(new Product(name.value, price.value, specs.value, url.value));
-            console.log(store);
-
-        }
 
         class Product {
             id;
@@ -115,17 +67,34 @@
             price;
             specs;
             url;
-
             constructor(name, price, specs, url) {
                 this.id = Math.floor(Math.random() * 90000) + 10000;
                 this.name = name;
                 this.price = price;
                 this.specs = specs;
                 this.url = url;
-
             }
-
         }
+
+        let name = document.getElementById("name")
+        let price = document.getElementById("price")
+        let specs = document.getElementById("specs")
+        let url = document.getElementById("url")
+
+
+        let store = []
+
+        function save() {
+            document.getElementById("product_list").innerHTML = ""
+            document.getElementById("product_list").innerHTML = "<tr><th>id</th><th>Name</th><th>Price</th><th>Specs</th><th>Img</th></tr>"
+            store.push(new Product(name.value, price.value, specs.value, url.value));
+            console.log(store);
+            for (let index = 0; index < store.length; index++) {
+                document.getElementById("product_list").innerHTML = document.getElementById("product_list").innerHTML + `<tr><td>${store[index].id}</td><td>${store[index].name}</td><td>${store[index].price}</td><td>${store[index].specs}</td><td><img width="100" src="${store[index].url}"></td></tr>`
+            }
+        }
+
+
 
     </script>
 
