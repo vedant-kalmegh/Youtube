@@ -45,7 +45,7 @@
             </dd>
 
             <dd>
-                <button class="btn btn-primary">Save</button>
+                <button class="btn btn-primary" onclick="save()">Save</button>
             </dd>
         </dl>
     </div>
@@ -74,7 +74,7 @@
 
 
         class Car {
-            
+
             fuel = "empty";
             constructor() {
                 console.log("Fuel Status is", this.fuel);
@@ -87,7 +87,7 @@
             }
         }
 
-            
+
 
 
         let vedant = new Car(); //object creation //constructor is first called
@@ -95,6 +95,37 @@
         vedant.fillFuel();
         console.log(vedant.fuel);
 
+        let name = document.getElementById("name")
+        let price = document.getElementById("price")
+        let specs = document.getElementById("specs")
+        let url = document.getElementById("url")
+
+
+         let store = []
+        function save() {
+            
+            store.push(new Product(name.value, price.value, specs.value, url.value));
+            console.log(store);
+
+        }
+
+        class Product {
+            id;
+            name;
+            price;
+            specs;
+            url;
+
+            constructor(name, price, specs, url) {
+                this.id = Math.floor(Math.random() * 90000) + 10000;
+                this.name = name;
+                this.price = price;
+                this.specs = specs;
+                this.url = url;
+
+            }
+
+        }
 
     </script>
 
