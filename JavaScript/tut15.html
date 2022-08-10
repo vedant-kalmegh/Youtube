@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUT 15</title>
+</head>
+
+<body>
+    <h1>Classes</h1>
+
+
+
+    <script>
+
+        let school = [{
+            id: 101,
+            name: "Ashutosh",
+            dob: "676535"
+        }, {
+            id: 102,
+            name: "Vedant",
+            dob: "676535"
+        }, {
+            id: 103,
+            name: "Rohan",
+            dob: "676535"
+        }]
+
+        for(let i=0; i<school.length; i++){
+            console.log(school[i].name);
+        }
+
+
+
+        class Student {
+            id;
+            name;
+            dob;
+            constructor(roll, name123, dob321) {
+                this.id = roll;
+                this.name = name123;
+                this.dob = dob321;
+            };
+            capitalizeName(){
+                return this.name.toUpperCase()
+            }
+        }
+
+
+
+
+
+        console.log("=======================================================================");
+
+        console.log(new Student(1,"Ashutosh","87654"));
+
+        console.log("=======================================================================");
+
+        let school2 = [
+            new Student(1,"Ashutosh","87654"),
+            new Student(2,"Vedant", "78903"),
+            new Student(3,"Rahul","98909")
+        ]
+
+        for(let i=0; i<school2.length; i++){
+            console.log(school2[i].capitalizeName());
+        }
+
+
+        function getName(name){
+            return `Hello ${name}`;
+        }
+
+        // let greet = getName("Vedant");
+        // console.log(greet);
+
+        // let greet2 = getName("Ashutosh");
+        // console.log(greet2);
+
+
+        function greet(){
+            return "Good Morning";
+        }
+
+        function checkEligibility(age){
+            if(age < 18){
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+        console.log(checkEligibility(15));
+
+        function addition(a,b){
+            return a+b;
+        }
+        
+
+        console.log(addition(10,20));
+
+
+        
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
